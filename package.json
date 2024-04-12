@@ -1,0 +1,76 @@
+{
+  "name": "react_express_monolit",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src/app",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "bin/start.sh",
+    "dev": "bin/dev.sh",
+    "build": "bin/build.sh",
+    "build:des": "bin/build.sh des",
+    "build:pre": "bin/build.sh pre",
+    "build:pro": "bin/build.sh pro",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "npx husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "standard"
+    ]
+  },
+  "lint-staged": {
+    "src/app/**/*{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "15.0.1",
+    "@testing-library/user-event": "14.5.2",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "helmet": "7.1.0",
+    "mongoose": "8.3.1",
+    "morgan": "1.10.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-loading-skeleton": "3.4.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "3.5.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@commitlint/cli": "19.2.1",
+    "@commitlint/config-conventional": "19.1.0",
+    "concurrently": "8.2.2",
+    "env-cmd": "10.1.0",
+    "eslint": "8.57.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "nodemon": "3.1.0",
+    "standard": "17.1.0"
+  },
+  "description": "Before you begin, make sure you have Node.js installed on your system.",
+  "main": "commitlint.config.js",
+  "author": "",
+  "license": "ISC"
+}
